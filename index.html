@@ -187,14 +187,7 @@
     margin: 0 auto;
 }
 
-        function openLightbox(image) {
-    const lightboxModal = document.getElementById('lightbox-modal');
-    const lightboxImage = document.getElementById('lightbox-image');
-    const lightboxDescription = document.getElementById('lightbox-description');
-    lightboxImage.src = image.src;
-    lightboxDescription.textContent = image.getAttribute('data-description') || "";
-    lightboxModal.style.display = 'flex';
-}
+     
         .gallery-item:hover img {
             transform: scale(1.05);
         }
@@ -549,6 +542,23 @@
         }
     });
 
+    // Lightbox
+function openLightbox(image) {
+    const lightboxModal = document.getElementById('lightbox-modal');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxDescription = document.getElementById('lightbox-description');
+    lightboxImage.src = image.src;
+    lightboxDescription.textContent = image.getAttribute('data-description') || "";
+    lightboxModal.style.display = 'flex';
+}
+document.getElementById('close-btn').onclick = function() {
+    document.getElementById('lightbox-modal').style.display = 'none';
+};
+// Close lightbox on click outside image
+document.getElementById('lightbox-modal').onclick = function(e) {
+    if(e.target.id === 'lightbox-modal') this.style.display = 'none';
+};
+    
     // Lightbox
     function openLightbox(image) {
         const lightboxModal = document.getElementById('lightbox-modal');
