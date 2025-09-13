@@ -16,6 +16,7 @@
             background-color: #f4f4f9;
             color: #333;
         }
+
         
     .parallax-welcome {
     position: relative;
@@ -322,6 +323,39 @@
     margin-top: auto;
     box-sizing: border-box;
 }
+
+        .parallax-programs {
+    position: relative;
+    min-height: 350px; /* Adjust as needed */
+    background-image: url('leaf.jpg'); /* Set your parallax image here */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 40px 0;
+    padding: 0;
+}
+
+.parallax-programs-content {
+    background: rgba(255,255,255,0.85);
+    padding: 36px 24px;
+    border-radius: 12px;
+    max-width: 750px;
+    margin: 48px auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+.centered-programs-image {
+    display: block;
+    margin: 22px auto 0 auto;
+    max-width: 220px; /* Adjust as needed */
+    width: 60%;
+    height: auto;
+    border-radius: 10px;
+}
         
     </style>
 </head>
@@ -370,6 +404,14 @@
     </ul>
 </div>
 
+    <!-- Parallax Programs Section -->
+<section class="parallax-programs">
+  <div class="parallax-programs-content">
+    <h2>Our Programs</h2>
+    <img src="leaf.jpg" alt="Programs" class="centered-programs-image" />
+  </div>
+</section>
+    
 <!-- Programs Section -->
 <div class="section programs" id="programs">
     <h2>Our Programs</h2>
