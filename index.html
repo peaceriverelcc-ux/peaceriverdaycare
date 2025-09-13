@@ -298,6 +298,16 @@
     right: 50%;
     transform: translate(-50%, 0);
 }
+        .gallery-description {
+    text-align: center;
+    margin: 30px auto 0;
+    font-size: 1.2em;
+    max-width: 600px;
+}
+.gallery-description a {
+    color: #1976d2;
+    text-decoration: underline;
+}
         
     </style>
 </head>
@@ -393,7 +403,13 @@
   <img src="p10.jpg" alt="Room J" data-description="Kindergarten to OSC Room" onclick="openLightbox(this)">
 </div>
     
-    
+    <!-- Add this after the gallery -->
+<div class="gallery-description">
+    <p>
+        Interested in seeing our daycare rooms in person? <br>
+        <strong>Call <a href="tel:780-932-1741">780-932-1741</a></strong> to book a daycare tour!
+    </p>
+</div>
 
 <!-- Lightbox Modal -->
     <div id="lightbox-modal">
