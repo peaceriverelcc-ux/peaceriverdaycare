@@ -16,6 +16,30 @@
             background-color: #f4f4f9;
             color: #333;
         }
+        
+    .parallax-welcome {
+    position: relative;
+    min-height: 400px; /* Adjust for your needs */
+    background-image: url('pr1.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.parallax-content {
+    background: rgba(255,255,255,0.85); /* Soft overlay for readability */
+    padding: 40px 30px;
+    border-radius: 12px;
+    max-width: 800px;
+    margin: 40px auto;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    text-align: center;
+}
         /* Navigation Bar */
         nav {
             position: sticky;
@@ -293,13 +317,15 @@
 <!-- Full-width Welcome Image -->
 <img src="pr1.jpg" alt="Our Daycare" class="full-width-image">
     
-<!-- Welcome Section -->
-<div class="section" id="welcome">
+<!-- Parallax Welcome Section -->
+<section class="parallax-welcome">
+  <div class="parallax-content">
     <h2>Welcome to Our Daycare!</h2>
     <p>At Peace River Early Learning, we are committed to providing a safe, nurturing, and engaging environment where children of all ages can learn, grow, and flourish. Our programs are thoughtfully designed to support every stage of early childhood development, blending educational activities with creative play to inspire curiosity, confidence, and a lifelong love of learning.
 
 Our dedicated team of educators works closely with families to ensure each child feels supported, valued, and encouraged to reach their full potential. Whether your child is just beginning their early learning journey or is preparing for school, we’re here to offer compassionate care, meaningful experiences, and a strong foundation for the future.</p>
 </div>
+    </section>
 
 <!-- Why Choose Us Section -->
 <div class="section" id="whychoose">
