@@ -326,8 +326,8 @@
 
         .parallax-programs {
     position: relative;
-    min-height: 350px; /* Adjust as needed */
-    background-image: url('leaf.jpg'); /* Set your parallax image here */
+    min-height: 350px;
+    background-image: url(leaf.jpg); /* Change this */
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -337,24 +337,34 @@
     margin: 0 0 40px 0;
     padding: 0;
 }
-
 .parallax-programs-content {
     background: rgba(255,255,255,0.85);
     padding: 36px 24px;
     border-radius: 12px;
-    max-width: 750px;
+    max-width: 800px;
     margin: 48px auto;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     text-align: center;
 }
-
 .centered-programs-image {
     display: block;
     margin: 22px auto 0 auto;
-    max-width: 220px; /* Adjust as needed */
+    max-width: 220px;
     width: 60%;
     height: auto;
     border-radius: 10px;
+}
+.parallax-programs-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+}
+.parallax-programs-content li {
+    background-color: #CCFFD4;
+    margin: 12px 0;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
 }
         
     </style>
@@ -404,26 +414,14 @@
     </ul>
 </div>
 
-    <!-- Parallax Programs Section -->
-<section class="parallax-programs">
+   <!-- Parallax Programs Section INCLUDING the Program List -->
+<section class="parallax-programs" id="programs">
   <div class="parallax-programs-content">
     <h2>Our Programs</h2>
-    <img src="leaf.jpg" alt="Programs" class="centered-programs-image" />
-  </div>
-</section>
-
-
-    <!-- Parallax Programs Section -->
-<section class="parallax-programs">
-  <div class="parallax-programs-content">
-    <h2>Our Programs</h2>
-    <img src="children.jpg" alt="Programs" class="centered-programs-image" />
-  </div>
-</section>
-
-
-<!-- Programs Section -->
-<div class="section programs" id="programs">
+    <img src="children.jpg" alt="Different daycare programs" class="centered-programs-image" />
+    <p>
+      We offer a range of early learning and childcare programs tailored to each age group, delivered by caring, qualified educators in a nurturing and stimulating environment.
+    </p>
     <ul>
         <li><strong>Infant Care (Aspen)</strong> - A nurturing environment for babies with individualized care.</li>
         <li><strong>Toddler Program (Cedar)</strong> - Hands-on learning to support your toddler’s growing curiosity.</li>
@@ -431,7 +429,8 @@
         <li><strong>Four to Pre-Kindergarten (Maple)</strong> - Advanced skills development for children ready for the next educational step.</li>
         <li><strong>Kindergarten to Out-Of-School Care</strong> - Fun and learning after school, with activities and support for schoolwork.</li>
     </ul>
-</div>
+  </div>
+</section>
 
 <!-- Gallery Section -->
     <h2 style="text-align:center; margin-top:40px;">Daycare Rooms</h2>
