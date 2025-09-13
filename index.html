@@ -185,9 +185,19 @@
     box-shadow: none;
     margin: 0 auto;
 }
+
+        function openLightbox(image) {
+    const lightboxModal = document.getElementById('lightbox-modal');
+    const lightboxImage = document.getElementById('lightbox-image');
+    const lightboxDescription = document.getElementById('lightbox-description');
+    lightboxImage.src = image.src;
+    lightboxDescription.textContent = image.getAttribute('data-description') || "";
+    lightboxModal.style.display = 'flex';
+}
         .gallery-item:hover img {
             transform: scale(1.05);
         }
+    
         #lightbox-modal {
             position: fixed;
             top: 0;
@@ -343,31 +353,53 @@
     <ul>
         <li><strong>Infant Care (Aspen)</strong> - A nurturing environment for babies with individualized care.</li>
         <li><strong>Toddler Program (Cedar)</strong> - Hands-on learning to support your toddler’s growing curiosity.</li>
-        <li><strong>Pre-Kindergarten 1 (Willow)</strong> - Preparing children for kindergarten with a strong foundation in literacy and numeracy.</li>
-        <li><strong>Pre-Kindergarten 2 (Maple)</strong> - Advanced skills development for children ready for the next educational step.</li>
-        <li><strong>Out-Of-School Care</strong> - Fun and learning after school, with activities and support for schoolwork.</li>
+        <li><strong>Pre-School (Willow)</strong> - Preparing children for kindergarten with a strong foundation in literacy and numeracy.</li>
+        <li><strong>Four to Pre-Kindergarten (Maple)</strong> - Advanced skills development for children ready for the next educational step.</li>
+        <li><strong>Kindergarten to Out-Of-School Care</strong> - Fun and learning after school, with activities and support for schoolwork.</li>
     </ul>
 </div>
 
 <!-- Gallery Section -->
     <h2 style="text-align:center; margin-top:40px;">Daycare Rooms</h2>
 <div class="gallery-container" id="gallery">
-    <div class="gallery-item"><img src="p1.jpg" alt="Image 1" onclick="openLightbox(this)"></div>
-    <div class="gallery-item"><img src="p2.jpg" alt="Image 2" onclick="openLightbox(this)"></div>
-    <div class="gallery-item"><img src="p3.jpg" alt="Image 3" onclick="openLightbox(this)"></div>
-    <div class="gallery-item"><img src="p4.jpg" alt="Image 4" onclick="openLightbox(this)"></div>
-    <div class="gallery-item"><img src="p5.jpg" alt="Image 5" onclick="openLightbox(this)"></div>
-    <div class="gallery-item"><img src="p6.jpg" alt="Image 6" onclick="openLightbox(this)"></div>
-    <div class="gallery-item"><img src="p7.jpg" alt="Image 7" onclick="openLightbox(this)"></div>
-    <div class="gallery-item"><img src="p8.jpg" alt="Image 8" onclick="openLightbox(this)"></div>
-    <div class="gallery-item"><img src="p9.jpg" alt="Image 9" onclick="openLightbox(this)"></div>
-    <div class="gallery-item"><img src="p10.jpg" alt="Image 10" onclick="openLightbox(this)"></div>
+    <div class="gallery-item">
+  <img src="p1.jpg" alt="Room A" data-description="Infant Room" onclick="openLightbox(this)">
 </div>
+<div class="gallery-item">
+  <img src="p2.jpg" alt="Room B" data-description="Pre-School Room" onclick="openLightbox(this)">
+</div>
+    <div class="gallery-item">
+  <img src="p3.jpg" alt="Room C" data-description="Four to Pre-Kindergarten Room" onclick="openLightbox(this)">
+</div>
+    <div class="gallery-item">
+  <img src="p4.jpg" alt="Room D" data-description="Pre-School Room" onclick="openLightbox(this)">
+</div>
+    <div class="gallery-item">
+  <img src="p5.jpg" alt="Room E" data-description="Toddler Room" onclick="openLightbox(this)">
+</div>
+    <div class="gallery-item">
+  <img src="p6.jpg" alt="Room F" data-description="Infant Room" onclick="openLightbox(this)">
+</div>
+    <div class="gallery-item">
+  <img src="p7.jpg" alt="Room G" data-description="Pre-School Room" onclick="openLightbox(this)">
+</div>
+    <div class="gallery-item">
+  <img src="p8.jpg" alt="Room H" data-description="Infant Room" onclick="openLightbox(this)">
+</div>
+    <div class="gallery-item">
+  <img src="p9.jpg" alt="Room I" data-description="Toddler Room" onclick="openLightbox(this)">
+</div>
+    <div class="gallery-item">
+  <img src="p10.jpg" alt="Room J" data-description="Kindergarten to OSC Room" onclick="openLightbox(this)">
+</div>
+    
+    
 
 <!-- Lightbox Modal -->
-<div id="lightbox-modal">
+    <div id="lightbox-modal">
     <span id="close-btn">&times;</span>
     <img id="lightbox-image" src="" alt="Zoomed Image">
+    <div id="lightbox-description" style="color:white; margin-top:18px; text-align:center;"></div>
 </div>
 
 <!-- FAQ Section -->
