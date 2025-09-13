@@ -372,7 +372,19 @@
     border-radius: 5px;
     text-align: left;
 }
-        
+
+        .lightbox-desc {
+  position: absolute;
+  bottom: 30px;         /* space from bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  width: 90%;           /* keep text within screen */
+}
+
         
     </style>
 </head>
@@ -487,7 +499,7 @@
     <div id="lightbox-modal">
     <span id="close-btn">&times;</span>
     <img id="lightbox-image" src="" alt="Zoomed Image">
-    <div id="lightbox-description" style="color:white; margin-bottom:50px; text-align:center;"></div>
+    <div id="lightbox-description" class="lightbox-desc"></div>
 </div>
 
 <!-- FAQ Section -->
